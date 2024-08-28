@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import './Status.css'
 import drone from './images/drone.svg'
 import { useDispatch, useSelector } from 'react-redux';
-
-
 import { useNavigate } from 'react-router-dom';
+import { getOrder } from '../../utilities/fetch';
 
 function Status() {
 
@@ -13,29 +12,24 @@ function Status() {
   const orderData = useSelector((state) => state.orders);
   console.log(orderData);
 
-  useEffect(() => {
-    getOrder()
-  }, [orderData]);
-
   const navigate = useNavigate();
 
-  async function getOrder() {
-    try {
-      const response = await fetch(`https://airbean-9pcyw.ondigitalocean.app/api/beans/order/status/${orderData.orderNr}`, {
-        method: "GET",
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      const data = await response.json();
-      console.log(data);
-      setTimeLeft(data.eta);
-    } catch (error) {
-      console.log(error);
+  useEffect(() => {
+    async function fetchOrder() {
+     
+      try {
+        const data = await getOrder(orderData.orderNr)
+        console.log(data);
+        setTimeLeft(data.eta);
+
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
+    fetchOrder();
+  }, [orderData]);
 
-
+  
   const goToNavPage = () => {
     timeLeft > 0 ? navigate("/navigation") : navigate("/menu");
   }

@@ -29,7 +29,7 @@ export default function LoginForm() {
     }
 
     return (
-        <article>
+        <main>
             <form onSubmit={handleSubmit}>
                 <label>
                     Användarnamn:
@@ -49,6 +49,6 @@ export default function LoginForm() {
                 </label>
                 <button type="submit">Logga in</button>
             </form>
-        </article>
+        </main>
     )
 }

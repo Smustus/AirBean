@@ -45,7 +45,8 @@ function Cart() {
         }
       }), 
       headers: {
-        'Content-Type': 'application/json' 
+        'Content-Type': 'application/json', 
+        'Authorization': `${sessionStorage.getItem('token')}`
         }
       });
       const data = await response.json();

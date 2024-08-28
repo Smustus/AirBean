@@ -1,5 +1,5 @@
 import React from "react";
-import { User } from "../components/createAccount/CreateAccount";
+import { User } from "../pages/createAccount/CreateAccount";
 
 const BASE_URL = 'https://airbean-9pcyw.ondigitalocean.app';
 
@@ -62,7 +62,6 @@ export async function checkToken() {
                 }
             });
             const data = await response.json();
-            console.log(data);
             return data;
 
         } catch (error: any) {
@@ -84,7 +83,6 @@ export async function fetchHistory() {
                 }
             });
             const data = await response.json();
-            console.log(data);
             return data;
 
         } catch (error: any) {
@@ -92,3 +90,23 @@ export async function fetchHistory() {
         }
     }
 };
+
+
+export async function getOrder(orderNum: string) {
+    try {
+        const response = await fetch(`${BASE_URL}/api/beans/order/status/${orderNum}`, {
+            method: "GET",
+            headers: {
+            'Content-Type': 'application/json', 
+            'Authorization': `${sessionStorage.getItem('token')}`
+            }
+        });
+        const data = await response.json();
+        console.log('Token');
+        return data;
+
+        } catch (error) {
+        console.error(error);
+        }
+
+  }

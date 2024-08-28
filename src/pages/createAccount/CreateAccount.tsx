@@ -26,24 +26,26 @@ export default function CreateAccount() {
     }
 
   return (
-    <form onSubmit={handleSubmit}>
-        <label>
-            Användarnamn:
-            <input
-                type="text"
-                value={username}
-                onChange={(e) => {setUsername(e.target.value)}}
-            ></input>
-        </label>
-        <label>
-            Lösenord:
-            <input
-                type="password"
-                value={password}
-                onChange={(e) => {setPassword(e.target.value)}}
-            ></input>
-        </label>
-        <button type="submit">Skapa konto</button>
-    </form>
+    <main>
+        <form onSubmit={handleSubmit}>
+            <label>
+                Användarnamn:
+                <input
+                    type="text"
+                    value={username}
+                    onChange={(e) => {setUsername(e.target.value)}}
+                ></input>
+            </label>
+            <label>
+                Lösenord:
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => {setPassword(e.target.value)}}
+                ></input>
+            </label>
+            <button type="submit">Skapa konto</button>
+        </form>
+    </main>
   )
 }

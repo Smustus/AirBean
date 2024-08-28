@@ -18,7 +18,7 @@ function About() {
     <div className='main__about'>
       <header className='header'>
         <img src={graphicsheader} alt="header image" />
-        <button className="header__navBtn" onClick={goToNavPage}><img src={navicon} className='navicon' alt="navicon image"/></button>
+        <button className="header__navBtn" onClick={goToNavPage}><img src={navicon} alt="Nav"/></button>
       </header>
       <br />
       <section className='main__para'>
