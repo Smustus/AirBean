@@ -1,0 +1,48 @@
+.menu__item{
+  display: flex;
+  justify-content: space-between;
+  margin: 0% 1% 0% 1%;
+
+  .item__btnAndInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+
+    .addToCartBtn {
+      border: none;
+      border-radius: 50%;
+      width: clamp(50px, 40px + 1vw, 70px);
+      height: clamp(50px, 40px + 1vw, 70px);
+      min-width: 50px;
+      min-height: 50px;
+      margin: 5px 15px 5px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .item__name__info{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    
+      .item__name{
+        font-weight: 600;
+      }
+    
+      .item__info {
+        font-family: 'Work-sans', sans-serif;
+      }
+    }
+  }
+  
+  .item__price{
+    margin: 5px;
+  }
+}
+

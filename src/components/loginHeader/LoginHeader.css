@@ -1,0 +1,21 @@
+.loginHeader {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.loginHeader a{
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  margin: 0px 25px;
+}
+
+.loginHeader a:hover{
+  color: rgba(0, 0, 0, 0.507);
+}

@@ -1,0 +1,32 @@
+.main__home {
+    width: 100vw;
+    min-width: 350px;
+    height: 100vh;
+    background-color: rgba(56, 132, 109, 1);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    .left_svg {
+        height: 100vh;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .right_svg {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .logo {
+        width: 70%;
+        z-index: 5;
+    }
+}

@@ -1,0 +1,145 @@
+.cartSection {
+  background-color: rgba(243, 228, 225, 1);
+}
+
+.cartSection__header {
+  background-color: rgba(243, 228, 225, 1);
+  height: 113px;
+  background-image: url(../../assets/graphics/graphics-header.svg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0% 0% 0% 0%;
+  position: relative;
+
+  .header__navBtn {
+    background-color: white;
+    width: clamp(50px, 40px + 1vw, 70px);
+    height: clamp(50px, 40px + 1vw, 70px);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 0% 0% 6%;
+
+    img {
+      width: clamp(25px, 15px + 1vw, 35px);
+      height: clamp(25px, 15px + 1vw, 35px);
+    }
+  }
+
+  .header__navBtn:hover {
+    background-color: rgb(219, 219, 219);
+  }
+
+  .header__cartBtn {
+    color: white;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 6% 0% 0%;
+    position: relative;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .cartBtn__count {
+      height: 25px;
+      width: 25px;
+      padding: 5px;
+      background-color: rgba(229, 103, 78, 1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      font-weight: 600;
+    }
+
+    .cart__arrow {
+      width: clamp(30px, 3vw, 50px);
+      height: clamp(30px, 3vw, 50px);
+      background-color: white;
+      position: absolute;
+      top: 95%;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.cart {
+  background-color: white;
+  color: rgba(47, 41, 38, 1);
+  padding: 20px;
+  width: 90vw;
+  min-width: 320px;
+  height: 77vh;
+  border-radius: 3px;
+  transform: translateY(-3%);
+  margin: 0 auto;
+  z-index: 5;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+
+  .cart__title {
+    margin-bottom: 30px;
+  }
+
+  .cart__wrapperCostAndBtn {
+    margin-top: auto;
+  }
+
+  .cart__costContainer {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    column-gap: 5px;
+    margin: auto;
+    overflow: hidden;
+
+    .costContainer__dots {
+      color: rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .priceContainer {
+      background-color: white;
+      margin-left: 10px
+    }
+    
+  }
+
+  .cart__costRelatedInfo {
+    text-align: start;    
+  }
+
+  .cart__orderBtn {
+    background-color: rgba(47, 41, 38, 1);
+    max-height: 100px;
+    max-width: 350px;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    margin: 50px 0 50px 0%;
+  }
+
+  .cart__orderBtn:hover {
+    background-color: rgba(47, 41, 38, 0.7);
+  }
+
+
+  .menuSection__footer {
+    background-color: rgba(243, 228, 225, 1);
+  }
+}
