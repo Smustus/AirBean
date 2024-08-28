@@ -29,7 +29,7 @@ const LoginHeader = () => {
   }, [dispatch]);
 
   const handleLogout = () => {
-    sessionStorage.setItem('hrefken', '');
+    sessionStorage.setItem('token', '');
     dispatch(setLoginState(false));
   }
 
@@ -51,7 +51,7 @@ const LoginHeader = () => {
                 >Start
               </a>
 
-              <a href='/orders' className={activePath === '/navigation' ? 'active' : ''}>Orderhistorik</a> 
+              <a href='/orders' className={activePath === '/orders' ? 'active' : ''}>Orderhistorik</a> 
 
               <a href='/' onClick={(e) => {
                 e.preventDefault();
